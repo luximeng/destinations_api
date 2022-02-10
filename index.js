@@ -4,6 +4,12 @@ const express = require("express")
 
 const PORT = 3000
 
+// if(process.env.PORT !== undefined){
+//     PORT = process.env.PORT
+// }
+const PORT = process.env.PORT || 3000;
+
+
 //creates an express server 
 const server = express()
 server.listen(PORT, ()=>{
