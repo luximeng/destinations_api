@@ -1,6 +1,7 @@
 //import, don't need .js cos node knows it's js
 const db = require("./db")
 const express = require("express")
+const cors = require("cors")
 
 // const PORT = 3000
 
@@ -10,6 +11,7 @@ const express = require("express")
 // 3000 local, deploy on heroku, process.env.port is port on heroku. this line check what heroku got. 
 const PORT = process.env.PORT || 3000;
 
+server.use(cors());
 
 //creates an express server 
 const server = express()
