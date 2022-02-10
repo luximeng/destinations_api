@@ -2,11 +2,12 @@
 const db = require("./db")
 const express = require("express")
 
-const PORT = 3000
+// const PORT = 3000
 
 // if(process.env.PORT !== undefined){
 //     PORT = process.env.PORT
 // }
+// 3000 local, deploy on heroku, process.env.port is port on heroku. this line check what heroku got. 
 const PORT = process.env.PORT || 3000;
 
 
