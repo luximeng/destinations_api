@@ -11,10 +11,11 @@ const cors = require("cors")
 // 3000 local, deploy on heroku, process.env.port is port on heroku. this line check what heroku got. 
 const PORT = process.env.PORT || 3000;
 
-server.use(cors());
+
 
 //creates an express server 
 const server = express()
+server.use(cors());
 server.listen(PORT, ()=>{
     console.log(`Server listening on PORT: ${PORT}`);
 });
